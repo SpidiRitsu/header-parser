@@ -10,7 +10,8 @@ app.listen(port, function () {
 app.get('/', function (req, res) {
 	console.log(req.headers);
 	res.json({
-		ipadress: req.ip,
+		ip: req.ip,
+		ips: req.ips,
 		language: req.headers['accept-language'].split(',')[0],
 		software: req.headers['user-agent'].split('(')[1].split(')')[0]
 	});
